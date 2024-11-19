@@ -1,0 +1,13 @@
+version: '1'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: impact-catalyst
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/impact-catalyst
+    env_file:
+      - .env
